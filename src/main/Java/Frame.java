@@ -11,19 +11,19 @@ public class Frame {
     private int frameLength;
     private double timeRelative;
     private String protocol;
-    private Date frameTime;
-    private Date frameDate;
     private Calendar receivingTime;
 
-    public Frame(int frameNumber, String type, double deltaTime, int frameLength, double timeRelative, String protocol, Date frameTime, Date frameDate) {
+    public Frame() {
+        receivingTime = Calendar.getInstance();
+    }
+
+    public Frame(int frameNumber, String type, double deltaTime, int frameLength, double timeRelative, String protocol) {
         this.frameNumber = frameNumber;
         this.type = type;
         this.deltaTime = deltaTime;
         this.frameLength = frameLength;
         this.timeRelative = timeRelative;
         this.protocol = protocol;
-        this.frameTime = frameTime;
-        this.frameDate = frameDate;
     }
 
     public int getFrameNumber() {
@@ -74,21 +74,6 @@ public class Frame {
         this.protocol = protocol;
     }
 
-    public Date getFrameTime() {
-        return frameTime;
-    }
-
-    public void setFrameTime(Date frameTime) {
-        this.frameTime = frameTime;
-    }
-
-    public Date getFrameDate() {
-        return frameDate;
-    }
-
-    public void setFrameDate(Date frameDate) {
-        this.frameDate = frameDate;
-    }
 
     public Calendar getReceivingTime() {
         return receivingTime;
