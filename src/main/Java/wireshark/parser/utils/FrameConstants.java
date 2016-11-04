@@ -1,3 +1,5 @@
+package wireshark.parser.utils;
+
 /**
  * Created by roman on 03.11.16.
  */

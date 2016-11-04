@@ -1,12 +1,10 @@
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
+package wireshark.parser.utils;
 
 /**
- * Created by roman on 03.11.16.
+ * Created by Krasnikov Roman on 03.11.16.
  */
-public class FrameUtils {
 
+public class FrameUtils {
     public static int getYear(String index) {
         String[] dateTmp = index.split("-");
         return Integer.parseInt(dateTmp[1]);
@@ -19,13 +17,7 @@ public class FrameUtils {
 
     public static int getDay(String index) {
         String[] dateTmp = index.split("-");
-        return Integer.parseInt(dateTmp[2]);
-    }
-
-    private static String[] getTimeFromString(String time) {
-        String[] tmp = time.split(" ");
-        String[] time_tmp = tmp[4].split(":");
-        return time_tmp;
+        return Integer.parseInt(dateTmp[3]);
     }
 
     public static int getHours(String time) {
@@ -41,6 +33,12 @@ public class FrameUtils {
     public static int getSeconds(String time) {
         String[] timeTmp = getTimeFromString(time);
         return Integer.parseInt(timeTmp[2].substring(0, timeTmp[2].indexOf(".")));
+    }
+
+    private static String[] getTimeFromString(String time) {
+        String[] tmp = time.split(" ");
+        String[] time_tmp = tmp[4].split(":");
+        return time_tmp;
     }
 
 }

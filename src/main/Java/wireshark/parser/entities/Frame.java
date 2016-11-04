@@ -1,3 +1,5 @@
+package wireshark.parser.entities;
+
 import java.util.Calendar;
 import java.util.Date;
 
