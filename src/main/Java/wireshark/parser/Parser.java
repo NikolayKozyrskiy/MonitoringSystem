@@ -13,12 +13,10 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Calendar;
 
-// TODO: 04.11.16 Написать тесты к этому классу
+// TODO: 04.11.16 Написать тесты
 // TODO: 04.11.16 Пофиксить баги
-// TODO: 04.11.16 Прогнать устно весь алгоритм
 
 
-// Замечания для тестов:
 
 /**
  * Created by Krasnikov Roman on 29.10.16 .
@@ -56,14 +54,38 @@ class Parser {
 
             Frame frame = null;
             while (true) {
-                if (parser.nextToken() == JsonToken.START_OBJECT) {
-                    frame = new Frame();
+                JsonToken token = parser.nextToken();
+                switch (token) {
+                    case START_OBJECT:
+                        frame = new Frame();
+                        break;
+                    case END_OBJECT:
+                        frames.add(frame);
+                        break;
+                    case VALUE_NULL:
+                        break;
+                    default:
+                        String fieldName = parser.getCurrentName();
+                        isFrameIndex(frame, parser, fieldName);
+                        isFrameType(frame, parser, fieldName);
+                        isFrameTime(frame, parser, fieldName);
+                        isFrameDeltaTime(frame, parser, fieldName);
+                        isFrameTimeRelative(frame, parser, fieldName);
+                        isFrameNumber(frame, parser, fieldName);
+                        isFrameLength(frame, parser, fieldName);
+                        isFrameProtocol(frame, parser, fieldName);
+                        break;
+                }
 
+
+                /*if (parser.nextToken() == JsonToken.START_OBJECT) {
+                    frame = new Frame();
                     //logger.info("Created new wireshark.parser.entities.Frame object");
                 }
                 else if (parser.currentToken() == JsonToken.END_OBJECT) {
                     frames.add(frame);
                     //logger.info("Added wireshark.parser.entities.Frame object into list");
+                } else if (parser.currentToken() == JsonToken.VALUE_NULL) {
                     continue;
                 }
                 else {
@@ -76,7 +98,7 @@ class Parser {
                     isFrameNumber(frame, parser, fieldName);
                     isFrameLength(frame, parser, fieldName);
                     isFrameProtocol(frame, parser, fieldName);
-                }
+                }*/
             }
         } catch (IOException e) {
             //logger.fatal(e.getMessage(), e);

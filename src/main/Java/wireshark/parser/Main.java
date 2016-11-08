@@ -11,6 +11,6 @@ public class Main {
 
         SimpleMeasurement measurement = parser.parse();
 
-        System.out.println(measurement);
+        System.out.println(measurement.getMeasure());
     }
 }
