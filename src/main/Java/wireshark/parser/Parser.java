@@ -3,7 +3,8 @@ package wireshark.parser;
 import com.fasterxml.jackson.core.JsonFactory;
 import com.fasterxml.jackson.core.JsonParser;
 import com.fasterxml.jackson.core.JsonToken;
-import org.apache.log4j.Logger;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import wireshark.parser.entities.Frame;
 import wireshark.parser.entities.SimpleMeasurement;
 import wireshark.parser.utils.FrameConstants;
@@ -14,15 +15,13 @@ import java.util.ArrayList;
 import java.util.Calendar;
 
 // TODO: 04.11.16 Написать тесты
-// TODO: 04.11.16 Пофиксить баги
-
 
 
 /**
  * Created by Krasnikov Roman on 29.10.16 .
  */
 class Parser {
-    //private static Logger logger = Logger.getLogger(Parser.class);
+    private static final Logger log = LoggerFactory.getLogger(Parser.class);
 
     private File jsonFile;
     private String fileName;
@@ -30,39 +29,52 @@ class Parser {
     public Parser() {
         try {
             fileName = getClass().getClassLoader().getResource("Network_1.json").getFile();
-            //logger.info("Got an absolute path of Network_1.json file");
+            log.info("Get name of file", fileName);
             jsonFile = new File(fileName);
-            //logger.info("Created jsonFile");
+            log.info("Created json file", jsonFile);
         } catch (NullPointerException e) {
-            //logger.fatal(e.getMessage(), e);
+            log.error("Failed to get name of file", e);
         }
     }
 
     public Parser(String fileName) {
         this.fileName = fileName;
-        //logger.info("Got an absolute path of Network_1.json file");
+        log.info("Get name of file", this.fileName);
         jsonFile = new File(fileName);
-        //logger.info("Created jsonFile");
+        log.info("Created json file", this.jsonFile);
     }
 
     public SimpleMeasurement parse() {
         ArrayList<Frame> frames = new ArrayList<Frame>();
+        int countOpenBrackets = 0;
+        int countCloseBrackets = 0;
 
         try {
             JsonFactory factory = new JsonFactory();
             JsonParser parser = factory.createParser(jsonFile);
+            log.info("JsonParser created");
 
             Frame frame = null;
             while (true) {
                 JsonToken token = parser.nextToken();
+                if (token == JsonToken.END_ARRAY)
+                    break;
+
                 switch (token) {
+                    case START_ARRAY:
+                        break;
                     case START_OBJECT:
-                        frame = new Frame();
+                        countOpenBrackets++;
+                        if (countOpenBrackets == 1)
+                            frame = new Frame();
                         break;
                     case END_OBJECT:
-                        frames.add(frame);
-                        break;
-                    case VALUE_NULL:
+                        countCloseBrackets++;
+                        if (countOpenBrackets == countCloseBrackets) {
+                            frames.add(frame);
+                            countOpenBrackets = 0;
+                            countCloseBrackets = 0;
+                        }
                         break;
                     default:
                         String fieldName = parser.getCurrentName();
@@ -76,32 +88,9 @@ class Parser {
                         isFrameProtocol(frame, parser, fieldName);
                         break;
                 }
-
-
-                /*if (parser.nextToken() == JsonToken.START_OBJECT) {
-                    frame = new Frame();
-                    //logger.info("Created new wireshark.parser.entities.Frame object");
-                }
-                else if (parser.currentToken() == JsonToken.END_OBJECT) {
-                    frames.add(frame);
-                    //logger.info("Added wireshark.parser.entities.Frame object into list");
-                } else if (parser.currentToken() == JsonToken.VALUE_NULL) {
-                    continue;
-                }
-                else {
-                    String fieldName = parser.getCurrentName();
-                    isFrameIndex(frame, parser, fieldName);
-                    isFrameType(frame, parser, fieldName);
-                    isFrameTime(frame, parser, fieldName);
-                    isFrameDeltaTime(frame, parser, fieldName);
-                    isFrameTimeRelative(frame, parser, fieldName);
-                    isFrameNumber(frame, parser, fieldName);
-                    isFrameLength(frame, parser, fieldName);
-                    isFrameProtocol(frame, parser, fieldName);
-                }*/
             }
         } catch (IOException e) {
-            //logger.fatal(e.getMessage(), e);
+            log.error("Failed to create JsonParser", e);
         }
         return new SimpleMeasurement(frames);
     }

@@ -2,9 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b516e106-9bef-44b0-a9a9-34623ab92947" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_17.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_log4j12_1_7_21.xml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/log_file.log" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/log4j.properties" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/main/Java/wireshark/parser/Main.java" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/wireshark/parser/Main.java" afterPath="$PROJECT_DIR$/src/main/Java/wireshark/parser/Main.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/MonitoringSystem.iml" afterPath="$PROJECT_DIR$/MonitoringSystem.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/pom.xml" afterPath="$PROJECT_DIR$/pom.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/wireshark/parser/Parser.java" afterPath="$PROJECT_DIR$/src/main/Java/wireshark/parser/Parser.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/Frame.java" afterPath="$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/Frame.java" />
     </list>
     <ignored path="MonitoringSystem.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -28,44 +37,15 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pom.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="525">
-              <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Network_test.json" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/resources/Network_test.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-              <folding />
-            </state>
-          </provider>
-          <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Parser.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/Parser.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="365">
-              <caret line="72" column="70" selection-start-line="72" selection-start-column="70" selection-end-line="72" selection-end-column="70" />
+            <state relative-caret-position="195">
+              <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1460#1467#0" expanded="true" />
+                <element signature="e#1446#1453#0" expanded="true" />
+                <element signature="method#isFrameIndex#0;class#Parser#0" expanded="false" />
                 <element signature="method#isFrameType#0;class#Parser#0" expanded="false" />
                 <element signature="method#isFrameTime#0;class#Parser#0" expanded="false" />
                 <element signature="method#isFrameDeltaTime#0;class#Parser#0" expanded="false" />
@@ -83,11 +63,61 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/Main.java">
+      <file leaf-file-name="SimpleMeasurement.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/SimpleMeasurement.java">
           <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="210">
+              <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+              <folding>
+                <element signature="e#437#438#0" expanded="true" />
+                <element signature="e#467#468#0" expanded="true" />
+                <element signature="e#500#501#0" expanded="true" />
+                <element signature="e#527#528#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+          <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
             <state relative-caret-position="165">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Frame.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/Frame.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="875">
+              <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log_file.log" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/log_file.log">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+          <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="0">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -103,8 +133,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="JUnit4 Test Class" />
         <option value="Class" />
+        <option value="XML Properties File" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -133,12 +164,15 @@
         <option value="$PROJECT_DIR$/src/main/Java/Parser.java" />
         <option value="$PROJECT_DIR$/src/main/Java/wireshark/parser/SimpleMeasurement.java" />
         <option value="$PROJECT_DIR$/src/main/Java/wireshark/parser/utils/FrameConstants.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/Frame.java" />
-        <option value="$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/SimpleMeasurement.java" />
         <option value="$PROJECT_DIR$/src/test/java/wireshark/parser/utils/FrameUtilsTest.java" />
         <option value="$PROJECT_DIR$/src/main/Java/wireshark/parser/utils/FrameUtils.java" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/log4j.properties" />
         <option value="$PROJECT_DIR$/src/main/Java/wireshark/parser/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/SimpleMeasurement.java" />
+        <option value="$PROJECT_DIR$/log_file.log" />
+        <option value="$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/Frame.java" />
+        <option value="$PROJECT_DIR$/src/test/java/wireshark/parser/ParserTest.java" />
         <option value="$PROJECT_DIR$/src/main/Java/wireshark/parser/Parser.java" />
       </list>
     </option>
@@ -215,8 +249,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scratches" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -245,21 +277,19 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="target" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MonitoringSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="MonitoringSystem" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="test" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="java" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="utils" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -278,10 +308,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="main" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -313,6 +339,8 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="Scope" />
     </panes>
   </component>
@@ -326,11 +354,13 @@
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../EducationCenter/Education-Center/7_JSF/JSFAdvanced" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../EducationCenter/Education-Center/9_JSP/JSPExample" />
     <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.includeInheritedMembers" value="true" />
   </component>
   <component name="RecentsManager">
     <key name="CreateTestDialog.RecentsKey">
+      <recent name="wireshark.parser" />
       <recent name="wireshark.parser.utils" />
       <recent name="" />
     </key>
@@ -806,7 +836,8 @@
       <workItem from="1478105934112" duration="947000" />
       <workItem from="1478176973118" duration="11579000" />
       <workItem from="1478286164400" duration="6421000" />
-      <workItem from="1478617750386" duration="3191000" />
+      <workItem from="1478617750386" duration="4721000" />
+      <workItem from="1478639280423" duration="10634000" />
     </task>
     <servers />
   </component>
@@ -834,7 +865,7 @@
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28715000" />
+    <option name="totallyTimeSpent" value="40879000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="6" />
@@ -842,14 +873,14 @@
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32650602" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3253012" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.5028612" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297568" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32891566" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3192771" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32891566" sideWeight="0.49713877" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3180723" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24964234" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -908,7 +939,7 @@
       <breakpoints-dialog>
         <breakpoints-dialog />
       </breakpoints-dialog>
-      <option name="time" value="25" />
+      <option name="time" value="28" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -917,6 +948,19 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="525">
@@ -949,7 +993,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1460#1467#0" expanded="true" />
+            <element signature="e#1446#1453#0" expanded="true" />
+            <element signature="method#isFrameIndex#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameType#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameTime#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameDeltaTime#0;class#Parser#0" expanded="false" />
@@ -1015,9 +1060,9 @@
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#437#438#0" expanded="false" />
-            <element signature="e#467#468#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="false" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1033,7 +1078,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1460#1467#0" expanded="true" />
+            <element signature="e#1446#1453#0" expanded="true" />
+            <element signature="method#isFrameIndex#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameType#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameTime#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameDeltaTime#0;class#Parser#0" expanded="false" />
@@ -1111,9 +1157,9 @@
           <caret line="23" column="5" selection-start-line="23" selection-start-column="5" selection-end-line="23" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#437#438#0" expanded="false" />
-            <element signature="e#467#468#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="false" />
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1129,7 +1175,8 @@
           <caret line="39" column="0" selection-start-line="39" selection-start-column="0" selection-end-line="39" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1460#1467#0" expanded="true" />
+            <element signature="e#1446#1453#0" expanded="true" />
+            <element signature="method#isFrameIndex#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameType#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameTime#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameDeltaTime#0;class#Parser#0" expanded="false" />
@@ -1194,7 +1241,8 @@
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1460#1467#0" expanded="true" />
+            <element signature="e#1446#1453#0" expanded="true" />
+            <element signature="method#isFrameIndex#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameType#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameTime#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameDeltaTime#0;class#Parser#0" expanded="false" />
@@ -1275,18 +1323,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__log4j_log4j_1_2_16.xml" />
     <entry file="file://$PROJECT_DIR$/.idea/libraries/Maven__junit_junit_4_11.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1311,30 +1348,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Network_1.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="25" selection-start-line="3" selection-start-column="25" selection-end-line="3" selection-end-column="25" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/wireshark/parser/utils/FrameUtilsTest.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/utils/FrameUtils.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
@@ -1348,84 +1361,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/SimpleMeasurement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="31" selection-start-line="22" selection-start-column="31" selection-end-line="22" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#437#438#0" expanded="false" />
-            <element signature="e#467#468#0" expanded="false" />
-            <element signature="e#527#528#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-        <state relative-caret-position="165">
-          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/utils/FrameConstants.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="90">
           <caret line="6" column="59" selection-start-line="6" selection-start-column="53" selection-end-line="6" selection-end-column="59" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/Frame.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#380#381#0" expanded="false" />
-            <element signature="e#434#435#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/Network_test.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" column="62" selection-start-line="10" selection-start-column="62" selection-end-line="10" selection-end-column="62" />
-          <folding />
-        </state>
-      </provider>
-      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="19" selection-start-line="35" selection-start-column="19" selection-end-line="35" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1447,11 +1386,38 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.8.4/jackson-core-2.8.4.jar!/com/fasterxml/jackson/core/JsonToken.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-427">
+          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log4j.properties.xml" />
     <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.8.4/jackson-core-2.8.4.jar!/com/fasterxml/jackson/core/JsonFactory.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
-          <caret line="73" column="0" selection-start-line="73" selection-start-column="0" selection-end-line="73" selection-end-column="0" />
+        <state relative-caret-position="147">
+          <caret line="159" column="0" selection-start-line="159" selection-start-column="0" selection-end-line="159" selection-end-column="0" />
           <folding>
+            <element signature="e#3393#3394#0" expanded="true" />
             <element signature="e#3432#3433#0" expanded="true" />
           </folding>
         </state>
@@ -1462,10 +1428,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.8.4/jackson-core-2.8.4.jar!/com/fasterxml/jackson/core/JsonToken.class">
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/src.zip!/java/lang/String.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-427">
-          <caret line="20" column="4" selection-start-line="20" selection-start-column="4" selection-end-line="20" selection-end-column="4" />
+        <state relative-caret-position="147">
+          <caret line="976" column="0" selection-start-line="976" selection-start-column="0" selection-end-line="976" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar:///Library/Java/JavaVirtualMachines/jdk1.8.0_92.jdk/Contents/Home/src.zip!/java/lang/Enum.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="102" column="0" selection-start-line="102" selection-start-column="0" selection-end-line="102" selection-end-column="0" />
+          <folding>
+            <element signature="e#3009#3010#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/fasterxml/jackson/core/jackson-core/2.8.4/jackson-core-2.8.4.jar!/com/fasterxml/jackson/core/base/ParserBase.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="147">
+          <caret line="156" column="0" selection-start-line="156" selection-start-column="0" selection-end-line="156" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/org/slf4j/slf4j-api/1.7.21/slf4j-api-1.7.21.jar!/org/slf4j/Logger.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="9" column="17" selection-start-line="9" selection-start-column="17" selection-end-line="9" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wireshark/parser/utils/FrameUtilsTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1477,8 +1497,99 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="225">
+          <caret line="15" column="48" selection-start-line="15" selection-start-column="48" selection-end-line="15" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Network_1.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/Network_test.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="23" selection-start-line="3" selection-start-column="14" selection-end-line="3" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/wireshark/parser/ParserTest.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="540">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/Frame.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="875">
+          <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/log_file.log">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1490,11 +1601,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/Parser.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="365">
-          <caret line="72" column="70" selection-start-line="72" selection-start-column="70" selection-end-line="72" selection-end-column="70" />
+        <state relative-caret-position="195">
+          <caret line="16" column="32" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1460#1467#0" expanded="true" />
+            <element signature="e#1446#1453#0" expanded="true" />
+            <element signature="method#isFrameIndex#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameType#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameTime#0;class#Parser#0" expanded="false" />
             <element signature="method#isFrameDeltaTime#0;class#Parser#0" expanded="false" />
@@ -1508,6 +1620,24 @@
       <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/Java/wireshark/parser/entities/SimpleMeasurement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="15" column="54" selection-start-line="15" selection-start-column="54" selection-end-line="15" selection-end-column="54" />
+          <folding>
+            <element signature="e#437#438#0" expanded="true" />
+            <element signature="e#467#468#0" expanded="true" />
+            <element signature="e#500#501#0" expanded="true" />
+            <element signature="e#527#528#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+      <provider editor-type-id="com.vaadin.designer.intellij.htmlEditor">
+        <state relative-caret-position="165">
+          <caret line="11" column="11" selection-start-line="11" selection-start-column="11" selection-end-line="11" selection-end-column="11" />
         </state>
       </provider>
     </entry>

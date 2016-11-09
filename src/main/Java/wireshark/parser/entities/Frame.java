@@ -84,5 +84,19 @@ public class Frame {
     public void setReceivingTime(Calendar receivingTime) {
         this.receivingTime = receivingTime;
     }
+
+    @Override
+    public String toString() {
+        return "Frame{" +
+                "frameNumber=" + frameNumber +
+                ", type='" + type + '\'' +
+                ", deltaTime=" + deltaTime +
+                ", frameLength=" + frameLength +
+                ", timeRelative=" + timeRelative +
+                ", protocol='" + protocol + '\'' +
+                ", receivingTime=" + receivingTime.getTime() +
+                '}';
+    }
+
 }
 
