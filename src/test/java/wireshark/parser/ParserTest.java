@@ -85,10 +85,5 @@ public class ParserTest {
     public void comparingDates() throws Exception {
         assertEquals(frame1.getReceivingTime(), actualMeasurement.getMeasure().get(0).getReceivingTime());
     }
-
-
-
-
-
-
+    
 }

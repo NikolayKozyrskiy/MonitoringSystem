@@ -22,30 +22,25 @@ import java.util.Calendar;
  */
 class Parser {
     private static final Logger log = LoggerFactory.getLogger(Parser.class);
+    private final String defaultFileName = getClass().getClassLoader().getResource("Network_1.json").getFile();
 
     private File jsonFile;
     private String fileName;
 
     public Parser() {
-        try {
-            fileName = getClass().getClassLoader().getResource("Network_1.json").getFile();
-            log.info("Get name of file", fileName);
-            jsonFile = new File(fileName);
-            log.info("Created json file", jsonFile);
-        } catch (NullPointerException e) {
-            log.error("Failed to get name of file", e);
-        }
+            jsonFile = new File(defaultFileName);
+            log.debug("Created json file", jsonFile);
     }
 
     public Parser(String fileName) {
         this.fileName = fileName;
-        log.info("Get name of file", this.fileName);
+        log.debug("Get name of file", this.fileName);
         jsonFile = new File(fileName);
-        log.info("Created json file", this.jsonFile);
+        log.debug("Created json file", this.jsonFile);
     }
 
     public SimpleMeasurement parse() {
-        ArrayList<Frame> frames = new ArrayList<Frame>();
+        ArrayList<Frame> frames = new ArrayList<>();
         int countOpenBrackets = 0;
         int countCloseBrackets = 0;
 
@@ -65,8 +60,10 @@ class Parser {
                         break;
                     case START_OBJECT:
                         countOpenBrackets++;
-                        if (countOpenBrackets == 1)
+                        if (countOpenBrackets == 1) {
                             frame = new Frame();
+
+                        }
                         break;
                     case END_OBJECT:
                         countCloseBrackets++;
@@ -78,24 +75,25 @@ class Parser {
                         break;
                     default:
                         String fieldName = parser.getCurrentName();
-                        isFrameIndex(frame, parser, fieldName);
-                        isFrameType(frame, parser, fieldName);
-                        isFrameTime(frame, parser, fieldName);
-                        isFrameDeltaTime(frame, parser, fieldName);
-                        isFrameTimeRelative(frame, parser, fieldName);
-                        isFrameNumber(frame, parser, fieldName);
-                        isFrameLength(frame, parser, fieldName);
-                        isFrameProtocol(frame, parser, fieldName);
+                        parseFrameIndex(frame, parser, fieldName);
+                        parseFrameType(frame, parser, fieldName);
+                        parseFrameTime(frame, parser, fieldName);
+                        parseFrameDeltaTime(frame, parser, fieldName);
+                        parseFrameTimeRelative(frame, parser, fieldName);
+                        parseFrameNumber(frame, parser, fieldName);
+                        parseFrameLength(frame, parser, fieldName);
+                        parseFrameProtocol(frame, parser, fieldName);
                         break;
                 }
             }
         } catch (IOException e) {
             log.error("Failed to create JsonParser", e);
+            throw new IllegalStateException();
         }
         return new SimpleMeasurement(frames);
     }
 
-    private void isFrameIndex(Frame frame, JsonParser parser, String fieldName) throws IOException {
+    private void parseFrameIndex(Frame frame, JsonParser parser, String fieldName) throws IOException {
         if (fieldName.equals(FrameConstants.FRAME_INDEX)) {
             parser.nextToken();
             if (frame != null) {
@@ -106,7 +104,7 @@ class Parser {
         }
     }
 
-    private void isFrameType(Frame frame, JsonParser parser, String fieldName) throws IOException {
+    private void parseFrameType(Frame frame, JsonParser parser, String fieldName) throws IOException {
         if (fieldName.equals(FrameConstants.FRAME_TYPE)) {
             parser.nextToken();
             if (frame != null) {
@@ -115,7 +113,7 @@ class Parser {
         }
     }
 
-    private void isFrameTime(Frame frame, JsonParser parser, String fieldName) throws IOException {
+    private void parseFrameTime(Frame frame, JsonParser parser, String fieldName) throws IOException {
         if (fieldName.equals(FrameConstants.FRAME_TIME)) {
             parser.nextToken();
             if (frame != null) {
@@ -126,7 +124,7 @@ class Parser {
         }
     }
 
-    private void isFrameDeltaTime(Frame frame, JsonParser parser, String fieldName) throws IOException {
+    private void parseFrameDeltaTime(Frame frame, JsonParser parser, String fieldName) throws IOException {
         if (fieldName.equals(FrameConstants.FRAME_DELTA_TIME)) {
             parser.nextToken();
             if (frame != null) {
@@ -135,7 +133,7 @@ class Parser {
         }
     }
 
-    private void isFrameTimeRelative(Frame frame, JsonParser parser, String fieldName) throws IOException {
+    private void parseFrameTimeRelative(Frame frame, JsonParser parser, String fieldName) throws IOException {
         if (fieldName.equals(FrameConstants.FRAME_TIME_RELATIVE)) {
             parser.nextToken();
             if (frame != null) {
@@ -144,7 +142,7 @@ class Parser {
         }
     }
 
-    private void isFrameNumber(Frame frame, JsonParser parser, String fieldName) throws IOException {
+    private void parseFrameNumber(Frame frame, JsonParser parser, String fieldName) throws IOException {
         if (fieldName.equals(FrameConstants.FRAME_NUMBER)) {
             parser.nextToken();
             if (frame != null) {
@@ -153,7 +151,7 @@ class Parser {
         }
     }
 
-    private void isFrameLength(Frame frame, JsonParser parser, String fieldName) throws IOException {
+    private void parseFrameLength(Frame frame, JsonParser parser, String fieldName) throws IOException {
         if (fieldName.equals(FrameConstants.FRAME_LENGTH)) {
             parser.nextToken();
             if (frame != null) {
@@ -162,7 +160,7 @@ class Parser {
         }
     }
 
-    private void isFrameProtocol(Frame frame, JsonParser parser, String fieldName) throws IOException {
+    private void parseFrameProtocol(Frame frame, JsonParser parser, String fieldName) throws IOException {
         if (fieldName.equals(FrameConstants.FRAME_PROTOCOL)) {
             if (frame != null) {
                 frame.setProtocol(parser.getText());

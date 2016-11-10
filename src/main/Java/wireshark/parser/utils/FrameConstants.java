@@ -3,7 +3,7 @@ package wireshark.parser.utils;
 /**
  * Created by roman on 03.11.16.
  */
-public class FrameConstants {
+public final class FrameConstants {
     public static final String FRAME_NUMBER = "frame.number";
     public static final String FRAME_TYPE = "_type";
     public static final String FRAME_DELTA_TIME = "frame.time_delta";
