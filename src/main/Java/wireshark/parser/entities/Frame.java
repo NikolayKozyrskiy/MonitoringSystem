@@ -17,6 +17,7 @@ public class Frame {
 
     public Frame() {
         receivingTime = Calendar.getInstance();
+        receivingTime.set(Calendar.MILLISECOND, 0);
     }
 
     public Frame(int frameNumber, String type, double deltaTime, int frameLength, double timeRelative, String protocol) {
@@ -26,6 +27,19 @@ public class Frame {
         this.frameLength = frameLength;
         this.timeRelative = timeRelative;
         this.protocol = protocol;
+        receivingTime = Calendar.getInstance();
+        receivingTime.set(Calendar.MILLISECOND, 0);
+    }
+
+    public Frame(int frameNumber, String type, double deltaTime, int frameLength, double timeRelative, String protocol, Calendar receivingTime) {
+        this.frameNumber = frameNumber;
+        this.type = type;
+        this.deltaTime = deltaTime;
+        this.frameLength = frameLength;
+        this.timeRelative = timeRelative;
+        this.protocol = protocol;
+        this.receivingTime = receivingTime;
+        this.receivingTime.set(Calendar.MILLISECOND, 0);
     }
 
     public int getFrameNumber() {
@@ -96,6 +110,22 @@ public class Frame {
                 ", protocol='" + protocol + '\'' +
                 ", receivingTime=" + receivingTime.getTime() +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+
+        Frame frame = (Frame) o;
+
+        if (frameNumber != frame.frameNumber) return false;
+        if (Double.compare(frame.deltaTime, deltaTime) != 0) return false;
+        if (frameLength != frame.frameLength) return false;
+        if (Double.compare(frame.timeRelative, timeRelative) != 0) return false;
+        if (type != null ? !type.equals(frame.type) : frame.type != null) return false;
+        return protocol != null ? protocol.equals(frame.protocol) : frame.protocol == null;
+
     }
 
 }
